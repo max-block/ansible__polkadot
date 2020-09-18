@@ -1,0 +1,10 @@
+- name: Update polkadot package
+  apt:
+    name: polkadot
+    state: latest
+    update_cache: yes
+
+- name: Restart polkadot service
+  systemd:
+    name: polkadot
+    state: restarted
